@@ -1,0 +1,6 @@
+all:
+  hosts:
+    server1:
+      ansible_host: 62.113.117.83
+      ansible_user: root
+      ansible_ssh_private_key_file: ~/.ssh/ansible

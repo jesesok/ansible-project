@@ -1,0 +1,19 @@
+- name: Check and Install Docker
+  hosts: all 
+  become: true  
+
+  tasks:
+    - name: Check if Docker is installed
+      command: docker --version
+      ignore_errors: yes
+      register: docker_check
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+      when: docker_check.rc != 0
+    - name: Hello world
+      command: docker run hello-world
+      when: docker_check.rc != 0
+      
