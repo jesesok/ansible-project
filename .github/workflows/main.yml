@@ -32,4 +32,4 @@ jobs:
         context: .
         file: ./dockerfile
         push: true
-        tags: ghcr.io/jesesok/your-image-name:latest
+        tags: ghcr.io/jesesok/apk:latest
