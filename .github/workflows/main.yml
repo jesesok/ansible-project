@@ -13,6 +13,7 @@ jobs:
       - name: Output GitHub Actor
         run: |
          echo "GitHub Actor: ${{ github.actor }}"
+         echo "GitHub Actor: ${{ secrets.GITHUB_TOKEN }}"
 
       - name: Checkout repository
         uses: actions/checkout@v2
