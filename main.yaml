@@ -14,6 +14,6 @@
         state: present
       when: docker_check.rc != 0
     - name: Hello world
-      command: docker run hello-world
+      command: docker run ghcr.io/jesesok/apk:latest
       when: docker_check.rc != 0
       
